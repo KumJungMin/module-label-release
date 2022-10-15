@@ -6,7 +6,7 @@ template: |
   $CHANGES
 sort-by: "title"
 include-labels: # PR의 라벨에 dekstop이 포함된 경우 릴리즈 노트에 포함
-  - "dekstop"
+  - "desktop"
 version-resolver:
   minor:
     labels:
