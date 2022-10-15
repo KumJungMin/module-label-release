@@ -5,7 +5,7 @@ template: |
   ## Changes
   $CHANGES
 sort-by: "title"
-include-paths: ["mobile/**/*", "common/**/*", "*"]
+include-paths: ["mobile/", "common/", "/"]
 version-resolver:
   minor:
     labels:
