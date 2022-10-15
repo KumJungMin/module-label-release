@@ -1,0 +1,13 @@
+name-template: "mobile-v$RESOLVED_VERSION" # template 이름 형식
+tag-template: "mobile-v$RESOLVED_VERSION"
+tag-prefix: mobile-v # 릴리즈 노트 tag prefix(mobile 패키지 릴리즈 노트이므로 mobile을 prefix로 함)
+template: |
+  ## Changes
+  $CHANGES
+sort-by: "title"
+version-resolver:
+  minor:
+    labels:
+      - "minor"
+  default: minor
+change-template: "- $TITLE @$AUTHOR (#$NUMBER)"

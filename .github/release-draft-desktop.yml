@@ -1,0 +1,13 @@
+name-template: "dekstop-v$RESOLVED_VERSION" # template 이름 형식
+tag-template: "dekstop-v$RESOLVED_VERSION"
+tag-prefix: dekstop-v # 릴리즈 노트 tag prefix(dekstop 패키지 릴리즈 노트이므로 dekstop을 prefix로 함)
+template: |
+  ## Changes
+  $CHANGES
+sort-by: "title"
+version-resolver:
+  minor:
+    labels:
+      - "minor"
+  default: minor
+change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
