@@ -5,7 +5,8 @@ template: |
   ## Changes
   $CHANGES
 sort-by: "title"
-include-paths: ["mobile/", "common/", "/"]
+include-labels: # PR의 라벨에 mobile이 포함된 경우 릴리즈 노트에 포함
+  - "mobile"
 version-resolver:
   minor:
     labels:
