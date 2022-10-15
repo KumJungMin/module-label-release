@@ -12,4 +12,4 @@ jobs:
       - uses: actions/labeler@v4 # 3. labeler를 사용합니다.
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
-          sync-labels: true # 3.1 만약 label 규칙에 맞지 않다면, 이전에 붙인 라벨을 제거합니다.
+          sync-labels: true # 3.1 규칙에 맞지 않는 라벨은 제거합니다.
