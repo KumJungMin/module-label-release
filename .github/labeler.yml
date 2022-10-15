@@ -1,0 +1,8 @@
+desktop:
+  - any: ["desktop/**/*", "common/**/*", "*"]
+  - all: ["!mobile/**/*"]
+  # desktop 폴더&하위폴더, common 폴더&하위 폴더, Root에서 변화가 있을 때 desktop 라벨을 붙임
+mobile:
+  - any: ["mobile/**/*", "common/**/*", "*"]
+  - all: ["!desktop/**/*"]
+  # mobile 폴더&하위폴더, common 폴더&하위 폴더, Root에서 변화가 있을 때 mobile 라벨을 붙임

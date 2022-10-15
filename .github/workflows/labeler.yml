@@ -1,0 +1,15 @@
+name: "Pull Request Labeler"
+on:
+  - pull_request_target # 1. PR 대상에 대한 이벤트를 지정합니다.
+
+jobs:
+  triage:
+    permissions: # 2. workflows의 권한(접근 범위)을 지정합니다.
+      contents: read # 2.1 내용을 읽을 수 있음
+      pull-requests: write # 2.2 PR을 작성할 수 있음
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/labeler@v4 # 3. labeler를 사용합니다.
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          sync-labels: true # 3.1 만약 label 규칙에 맞지 않다면, 이전에 붙인 라벨을 제거합니다.
